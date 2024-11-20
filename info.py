@@ -1,6 +1,10 @@
 import re
 from os import environ
+from dotenv import load_dotenv
 from Script import script 
+
+# Load environment variables from .env file
+load_dotenv()
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
